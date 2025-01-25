@@ -13,7 +13,7 @@ const Login = () => {
     const handlelogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/accounts/login/', { username, password });
+            const response = await axios.post('http://localhost:8000/api/accounts/login', { username, password });
             alert(response.data.message);
             navigate('/');
         } catch (error) {
